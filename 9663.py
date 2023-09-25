@@ -59,15 +59,15 @@ def dfs(n):
         return
         
     for i in range(N):
-        if check_row[i]== check_column[n+i] == check_diagonal[n-i] == 0:
-            check_row[i] = check_column[n+i] = check_diagonal[n-i] = 1 
+        if check_column[i]== check_right_diagonal[n+i] == check_left_diagonal[n-i] == 0:
+            check_column[i] = check_right_diagonal[n+i] = check_left_diagonal[n-i] = 1 
             dfs(n+1)
-            check_row[i] = check_column[n+i] = check_diagonal[n-i] = 0 
+            check_column[i] = check_right_diagonal[n+i] = check_left_diagonal[n-i] = 0 
 
 N = int(input())
 ans = 0
-check_row = [0] * N
-check_column = [0] * (2*N)
-check_diagonal = [0] * (2*N)
+check_column = [0] * N
+check_right_diagonal = [0] * (2*N)
+check_left_diagonal = [0] * (2*N)
 dfs(0)
 print(ans)
