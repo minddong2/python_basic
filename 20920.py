@@ -12,6 +12,7 @@ for _ in range(N):
         word_cnt[word] += 1
 
 word_list = word_cnt.keys()
+print(word_list)
 word_list = sorted(word_list, key=lambda x: (-word_cnt[x], -len(x), x))
 for word in word_list:
     print(word)
