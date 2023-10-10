@@ -8,7 +8,7 @@
 
 
 # for i in range(n):
-#     len_number_list.append(len(input_list[i]))
+#     len_number_list.append(len(inputd_list[i]))
 # print(input_list)
 # for i in range(n):
 #     min_len = min(len_number_list)
